@@ -4,8 +4,7 @@
 
 	@if(count($users))
 		@foreach ($users as $user)
-			<p>{{{ $user->email }}}</p>
-			<p>{{{ $user->email or 'default value' }}}</p>
+			<p><strong>{{{ $user->title }}}</strong> By {{{ $user->email }}}</p>
 		@endforeach
 	@endif
 
