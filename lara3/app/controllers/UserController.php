@@ -62,8 +62,9 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = DB::table('users')->where(array('email'=>'jolinar@jolinar.org', 'id'=>3))->first();
+		// $user = DB::table('users')->where(array('email'=>'jolinar@jolinar.org', 'id'=>3))->first();
 		
+		$user = User::with('categories')->find($id);
 		return View::make('user.show', compact('user'));
 	}
 
@@ -76,7 +77,8 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$user = User::find($id);
+		return View::make('user.edit', compact('user'));
 	}
 
 
