@@ -1,1 +1,0 @@
-C:\wamp\www\laravelTut\laraBlog\app/views/posts/create.blade.php
