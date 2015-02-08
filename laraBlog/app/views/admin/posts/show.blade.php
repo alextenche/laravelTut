@@ -1,0 +1,1 @@
+C:\wamp\www\laravelTut\laraBlog\app/views/posts/show.blade.php
