@@ -13,5 +13,13 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	$data = ['name' => 'alex', 'email' => 'alex@tenche.com'];
+	// return View::make('hello', array('name' => 'friend' ));
+	// return View::make('hello')->with('name', 'amigo');
+	return View::make('hello')->with($data);
+});
+
+Route::get('/hello/{name?}', function($name = 'world')
+{
+	return View::make('hello')->with('name', $name);
 });
