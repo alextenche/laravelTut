@@ -13,13 +13,18 @@
 
 Route::get('/', function()
 {
-	$data = ['name' => 'alex', 'email' => 'alex@tenche.com'];
-	// return View::make('hello', array('name' => 'friend' ));
-	// return View::make('hello')->with('name', 'amigo');
-	return View::make('hello')->with($data);
+	$data = [
+		'name' => 'alex',
+		'email' => 'alex@tenche.com',
+		'location' => 'Timisoara',
+		'last_name' => 'Tenche',
+		'malicious' => '<script window.alert("dont thrust user input");></script>'
+
+	];
+	return View::make('hello')->withData($data);
 });
 
-Route::get('/hello/{name?}', function($name = 'world')
-{
-	return View::make('hello')->with('name', $name);
-});
+//Route::get('/hello/{name?}', function($name = 'world')
+//{
+//	return View::make('hello')->with('name', $name);
+//});

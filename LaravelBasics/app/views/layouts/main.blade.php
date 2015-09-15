@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>Foundation Template | Blog</title>
+		<title> Laravel Basics </title>
 		<meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
 		<link rel="stylesheet" href="css/foundation.css"/>
 		<script src="js/vendor/modernizr.js"></script>
