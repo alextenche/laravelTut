@@ -11,20 +11,18 @@
 |
 */
 
-Route::get('/', function()
+/**
+ * / = home
+ * /todos - all lists
+ * /todos/1 - show
+ * /todos/1/edit - edit and update
+ * /todos/create - create new list
+ */
+
+Route::get('/', 'TodoListController@index');
+Route::get('/todos', 'TodoListController@index');
+
+Route::get('/todos/{id}', function($id)
 {
-	$data = [
-		'name' => 'alex',
-		'email' => 'alex@tenche.com',
-		'location' => 'Timisoara',
-		'last_name' => 'Tenche',
-		'malicious' => '<script window.alert("dont thrust user input");></script>'
-
-	];
-	return View::make('hello')->withData($data);
+	return View::make('todos.show')->withId($id);
 });
-
-//Route::get('/hello/{name?}', function($name = 'world')
-//{
-//	return View::make('hello')->with('name', $name);
-//});
