@@ -20,9 +20,11 @@
  */
 
 Route::get('/', 'TodoListController@index');
-Route::get('/todos', 'TodoListController@index');
+// Route::get('/todos', 'TodoListController@index');
+// Route::get('/todos/{id}', 'TodoListController@show');
 
-Route::get('/todos/{id}', function($id)
-{
-	return View::make('todos.show')->withId($id);
+Route::get('db', function(){
+	return DB::select('select database();');
 });
+
+Route::resource('todos', 'TodoListController');

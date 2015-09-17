@@ -43,7 +43,7 @@ class TodoListController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return View::make('todos.show')->withId($id);
 	}
 
 
