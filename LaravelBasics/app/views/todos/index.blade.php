@@ -1,6 +1,12 @@
 @extends('layouts.main')
 @section('content')
 
-  <h2> show all todos list </h2>
+  <h2> All Todos List </h2>
+
+  <ul>
+    @foreach($todo_lists as $list)
+      <li> {{{ $list->name }}} </li>
+    @endforeach
+  </ul>
 
 @stop

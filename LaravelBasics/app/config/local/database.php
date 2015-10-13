@@ -23,7 +23,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'laravelbasics',
+			'database'  => 'odot',
 			'username'  => 'homestead',
 			'password'  => 'secret',
 			'charset'   => 'utf8',

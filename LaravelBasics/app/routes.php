@@ -25,7 +25,7 @@ Route::get('/', 'TodoListController@index');
 
 Route::get('db', function(){
 
-	$result = DB::table('todo_lists')->where('name', 'Your List')->first();
+	$result = DB::table('todo_lists')->where('name', "Criss List")->first();
 	return $result->name;
 
 });
