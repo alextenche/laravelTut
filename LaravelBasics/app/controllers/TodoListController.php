@@ -47,13 +47,13 @@ class TodoListController extends \BaseController {
 
 		// test if input fails
 		if ($validator->fails()) {
-				return Redirect::route('todos.create');
+			return Redirect::route('todos.create')->withErrors($validator)->withInput();
 		}
 		$name = Input::get('title');
 		$list = new TodoList();
 		$list->name = $name;
 		$list->save();
-		return Redirect::route('todos.index');
+		return Redirect::route('todos.index')->withMessage('List Was Created');
 	}
 
 
